@@ -741,10 +741,19 @@ section {
     background: var(--bg-secondary);
 }
 
+.references-subtitle {
+    text-align: center;
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+    margin-top: -1rem;
+}
+
 .testimonials-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 3rem;
 }
 
 .testimonial-card {
@@ -759,6 +768,7 @@ section {
 .testimonial-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-xl);
+    border-color: var(--primary-color);
 }
 
 .quote-icon {
@@ -767,14 +777,21 @@ section {
     opacity: 0.2;
     line-height: 1;
     margin-bottom: 1rem;
+    font-family: Georgia, serif;
 }
 
 .testimonial-text {
-    font-size: 1.125rem;
+    font-size: 1.0625rem;
     color: var(--text-secondary);
     line-height: 1.8;
     margin-bottom: 2rem;
     font-style: italic;
+}
+
+.testimonial-text strong {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-style: normal;
 }
 
 .testimonial-author {
@@ -783,15 +800,55 @@ section {
     gap: 1rem;
 }
 
+.author-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--gradient-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: white;
+    font-size: 1.125rem;
+    flex-shrink: 0;
+}
+
 .author-info h4 {
-    font-size: 1rem;
+    font-size: 1.0625rem;
     color: var(--text-primary);
     margin-bottom: 0.25rem;
+    font-weight: 700;
 }
 
 .author-info p {
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
     color: var(--text-secondary);
+}
+
+.linkedin-references {
+    text-align: center;
+    padding: 2rem;
+    background: var(--bg-card);
+    border-radius: 15px;
+    border: 2px dashed var(--border-color);
+}
+
+.linkedin-references p {
+    font-size: 1.0625rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.linkedin-references a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.linkedin-references a:hover {
+    color: var(--secondary-color);
 }
 
 /* Contact Section */
@@ -899,6 +956,10 @@ section {
     }
 
     .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonials-grid {
         grid-template-columns: 1fr;
     }
 
