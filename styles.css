@@ -208,6 +208,31 @@ body {
     text-align: center;
 }
 
+.profile-photo {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .profile-img {
+    border-color: var(--bg-card);
+}
+
 .hero-title {
     font-size: clamp(3rem, 8vw, 5rem);
     font-weight: 900;

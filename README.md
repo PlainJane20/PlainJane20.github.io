@@ -11,6 +11,39 @@ Modern, colorful portfolio website showcasing professional experience, projects,
 - **LinkedIn References**: Real recommendations from colleagues
 - **Downloadable Resume**: One-click PDF download
 
+## 📸 Adding Your Profile Photo
+
+To add your LinkedIn profile photo:
+
+1. **Download your LinkedIn photo**:
+   - Go to your [LinkedIn profile](https://linkedin.com/in/navisohi/)
+   - Right-click on your profile photo
+   - Save as `profile-photo.jpg` (or `.png`)
+
+2. **Add to this directory**:
+   ```bash
+   # Place your photo in the playground folder
+   cp /path/to/your/photo.jpg /Users/navis/playground/profile-photo.jpg
+   ```
+
+3. **If using a different filename**, update `index.html`:
+   ```html
+   <img src="YOUR_PHOTO.jpg" alt="Navi Sohi" class="profile-img">
+   ```
+
+4. **Commit and push**:
+   ```bash
+   git add profile-photo.jpg
+   git commit -m "Add profile photo"
+   git push origin main:master
+   ```
+
+### Quick Method - Download from LinkedIn:
+```bash
+# Download your LinkedIn photo directly
+curl "YOUR_LINKEDIN_PHOTO_URL" -o profile-photo.jpg
+```
+
 ## 📄 Adding Your Resume PDF
 
 To enable the "Download Resume" button:
