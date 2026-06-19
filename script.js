@@ -206,12 +206,12 @@ if (carousel && prevBtn && nextBtn) {
         scrollToCard(currentIndex);
     });
 
-    // Auto-scroll every 4 seconds
+    // Auto-scroll every 2 seconds
     function startAutoScroll() {
         autoScrollInterval = setInterval(() => {
             currentIndex = (currentIndex + 1) % cards.length;
             scrollToCard(currentIndex);
-        }, 4000); // Changed from 5000 to 4000 for faster auto-scroll
+        }, 2000); // Fast auto-scroll every 2 seconds
     }
 
     function resetAutoScroll() {
