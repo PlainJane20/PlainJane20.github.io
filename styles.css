@@ -215,10 +215,11 @@ body {
 }
 
 .profile-img {
-    width: 180px;
-    height: 180px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
+    object-position: center 20%;
     border: 5px solid white;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
