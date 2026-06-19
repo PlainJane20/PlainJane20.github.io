@@ -156,6 +156,93 @@ if (heroTitle && heroTitle.textContent) {
     // typeWriter();
 }
 
+// Testimonials Carousel
+const carousel = document.getElementById('testimonialsCarousel');
+const prevBtn = document.getElementById('carouselPrev');
+const nextBtn = document.getElementById('carouselNext');
+const dotsContainer = document.getElementById('carouselDots');
+
+if (carousel && prevBtn && nextBtn) {
+    const cards = carousel.querySelectorAll('.testimonial-card');
+    let currentIndex = 0;
+    let autoScrollInterval;
+
+    // Create dots
+    cards.forEach((_, index) => {
+        const dot = document.createElement('div');
+        dot.classList.add('carousel-dot');
+        if (index === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => scrollToCard(index));
+        dotsContainer.appendChild(dot);
+    });
+
+    const dots = dotsContainer.querySelectorAll('.carousel-dot');
+
+    function updateDots() {
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });
+    }
+
+    function scrollToCard(index) {
+        currentIndex = index;
+        const card = cards[index];
+        const scrollLeft = card.offsetLeft - (carousel.offsetWidth - card.offsetWidth) / 2;
+        carousel.scrollTo({
+            left: scrollLeft,
+            behavior: 'smooth'
+        });
+        updateDots();
+        resetAutoScroll();
+    }
+
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+        scrollToCard(currentIndex);
+    });
+
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % cards.length;
+        scrollToCard(currentIndex);
+    });
+
+    // Auto-scroll every 5 seconds
+    function startAutoScroll() {
+        autoScrollInterval = setInterval(() => {
+            currentIndex = (currentIndex + 1) % cards.length;
+            scrollToCard(currentIndex);
+        }, 5000);
+    }
+
+    function resetAutoScroll() {
+        clearInterval(autoScrollInterval);
+        startAutoScroll();
+    }
+
+    // Start auto-scroll
+    startAutoScroll();
+
+    // Pause auto-scroll on hover
+    carousel.addEventListener('mouseenter', () => {
+        clearInterval(autoScrollInterval);
+    });
+
+    carousel.addEventListener('mouseleave', () => {
+        startAutoScroll();
+    });
+
+    // Update current index based on scroll position
+    carousel.addEventListener('scroll', () => {
+        const scrollLeft = carousel.scrollLeft;
+        const cardWidth = cards[0].offsetWidth;
+        const newIndex = Math.round(scrollLeft / (cardWidth + 32)); // 32 is gap
+        if (newIndex !== currentIndex && newIndex >= 0 && newIndex < cards.length) {
+            currentIndex = newIndex;
+            updateDots();
+        }
+    });
+}
+
 // Console Easter Egg
 console.log('%c👋 Hi there!', 'font-size: 20px; font-weight: bold; color: #667eea;');
 console.log('%cInterested in the code? Check out the repository!', 'font-size: 14px; color: #6b7280;');

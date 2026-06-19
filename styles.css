@@ -775,11 +775,93 @@ section {
     margin-top: -1rem;
 }
 
-.testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 2.5rem;
+/* Carousel Wrapper */
+.testimonials-carousel-wrapper {
+    position: relative;
     margin-bottom: 3rem;
+    overflow: hidden;
+}
+
+.testimonials-carousel {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    padding: 1rem 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.testimonials-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.testimonials-carousel .testimonial-card {
+    flex: 0 0 calc(100% - 4rem);
+    max-width: 600px;
+    scroll-snap-align: center;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--bg-card);
+    border: 2px solid var(--border-color);
+    color: var(--text-primary);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-md);
+}
+
+.carousel-btn:hover {
+    background: var(--gradient-1);
+    color: white;
+    border-color: transparent;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn-prev {
+    left: -25px;
+}
+
+.carousel-btn-next {
+    right: -25px;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 2rem;
+}
+
+.carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--border-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-dot.active {
+    background: var(--gradient-1);
+    width: 32px;
+    border-radius: 6px;
+}
+
+.carousel-dot:hover {
+    background: var(--primary-color);
 }
 
 .testimonial-card {
@@ -852,29 +934,93 @@ section {
     color: var(--text-secondary);
 }
 
-.linkedin-references {
-    text-align: center;
-    padding: 2rem;
-    background: var(--bg-card);
-    border-radius: 15px;
+/* Placeholder Cards */
+.testimonial-placeholder {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
     border: 2px dashed var(--border-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 400px;
 }
 
-.linkedin-references p {
-    font-size: 1.0625rem;
-    color: var(--text-secondary);
-    margin: 0;
+.testimonial-placeholder .testimonial-text {
+    text-align: center;
+    font-style: normal;
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
 }
 
-.linkedin-references a {
+.placeholder-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.placeholder-content svg {
     color: var(--primary-color);
+    opacity: 0.7;
+}
+
+.view-more-btn {
+    background: var(--gradient-1);
+    color: white;
+    padding: 0.875rem 2rem;
+    border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-md);
 }
 
-.linkedin-references a:hover {
-    color: var(--secondary-color);
+.view-more-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-xl);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 900;
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-top: 0.5rem;
+}
+
+.companies-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.company-badge {
+    background: var(--bg-card);
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    font-size: 0.9375rem;
 }
 
 /* Contact Section */
