@@ -613,6 +613,95 @@ section {
     background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
 }
 
+.banner-art {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.banner-badge {
+    position: absolute;
+    top: 1.25rem;
+    left: 1.25rem;
+    z-index: 2;
+    padding: 0.4rem 0.9rem;
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 50px;
+    color: #ffffff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+/* Animated banner motion: flowing dash on the active route */
+@keyframes banner-dash-flow {
+    to { stroke-dashoffset: -24; }
+}
+
+.banner-flow {
+    stroke-dasharray: 5 5;
+    stroke-linecap: round;
+    animation: banner-dash-flow 0.9s linear infinite;
+}
+
+/* Traveling signal riding the active route/pipeline */
+@keyframes banner-travel {
+    0% { offset-distance: 0%; opacity: 0; }
+    8% { opacity: 1; }
+    92% { opacity: 1; }
+    100% { offset-distance: 100%; opacity: 0; }
+}
+
+.banner-traveler {
+    offset-rotate: 0deg;
+    filter: drop-shadow(0 0 6px rgba(250, 204, 21, 0.9));
+    animation: banner-travel 2.8s ease-in-out infinite;
+}
+
+.sb-traveler {
+    offset-path: path("M70,110 C140,110 160,110 195,110 C260,110 280,150 330,155");
+}
+
+.tl-traveler {
+    offset-path: path("M65,110 H335");
+    animation-duration: 3.4s;
+}
+
+/* Soft radar pulse around active/hub nodes */
+@keyframes banner-pulse-ring {
+    0% { transform: scale(1); opacity: 0.85; }
+    100% { transform: scale(2.2); opacity: 0; }
+}
+
+.banner-pulse {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: banner-pulse-ring 2.4s ease-out infinite;
+}
+
+.banner-pulse-delay {
+    animation-delay: 1.2s;
+}
+
+.tl-pulse {
+    animation: banner-pulse-ring 2.4s ease-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .banner-flow,
+    .banner-traveler,
+    .banner-pulse,
+    .tl-pulse {
+        animation: none;
+    }
+}
+
 .project-overlay {
     position: absolute;
     top: 0;
@@ -676,6 +765,11 @@ section {
     font-size: 0.75rem;
     font-weight: 600;
     color: var(--text-secondary);
+}
+
+.projects-more {
+    text-align: center;
+    margin-top: 3rem;
 }
 
 /* Education & Certifications Section */

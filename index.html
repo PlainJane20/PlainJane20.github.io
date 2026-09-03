@@ -33,7 +33,8 @@
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#projects" class="nav-link">Experience</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#education" class="nav-link">Education</a></li>
                 <li><a href="#recommendations" class="nav-link">References</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -131,6 +132,15 @@
                         <div class="skill-tag">SQL (10M+ records)</div>
                         <div class="skill-tag">Python</div>
                         <div class="skill-tag">JavaScript</div>
+                        <div class="skill-tag">TypeScript & React</div>
+                        <div class="skill-tag">Claude / Anthropic API</div>
+                        <div class="skill-tag">Multi-Agent AI Orchestration</div>
+                        <div class="skill-tag">LLM Evals & Guardrails</div>
+                        <div class="skill-tag">Rust & Tauri (Desktop Apps)</div>
+                        <div class="skill-tag">Docker</div>
+                        <div class="skill-tag">GitHub Actions CI/CD</div>
+                        <div class="skill-tag">Slack & Jira API Integration</div>
+                        <div class="skill-tag">SQLite</div>
                         <div class="skill-tag">BigQuery</div>
                         <div class="skill-tag">Snowflake</div>
                         <div class="skill-tag">Tableau</div>
@@ -148,7 +158,7 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="projects" class="projects">
+    <section id="experience" class="experience">
         <div class="container">
             <h2 class="section-title animate-on-scroll">Professional Experience</h2>
             <div class="experience-timeline">
@@ -156,7 +166,7 @@
                 <div class="experience-card animate-on-scroll">
                     <div class="experience-header">
                         <div>
-                            <h3>Verily Health (Alphabet Company)</h3>
+                            <h3>Verily Health (Formerly Google Life Sciences)</h3>
                             <h4>Staff Technical Program Manager, Planning & Compliance</h4>
                         </div>
                         <span class="date-badge">May 2024 – Present</span>
@@ -285,6 +295,166 @@
         </div>
     </section>
 
+    <!-- Projects Section -->
+    <section id="projects" class="dev-projects">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Projects</h2>
+            <p class="references-subtitle animate-on-scroll">Personal builds exploring multi-agent AI orchestration and governance</p>
+            <div class="projects-grid animate-on-scroll">
+                <div class="project-card">
+                    <div class="project-image project-image--switchboard">
+                        <svg class="banner-art" viewBox="0 0 400 220" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <defs>
+                                <linearGradient id="sb-bg" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#5b5fe0"/>
+                                    <stop offset="100%" stop-color="#6d28d9"/>
+                                </linearGradient>
+                                <radialGradient id="sb-glow" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" stop-color="#ffffff" stop-opacity="0.3"/>
+                                    <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+                                </radialGradient>
+                                <filter id="sb-blur" x="-80%" y="-80%" width="260%" height="260%">
+                                    <feGaussianBlur stdDeviation="5"/>
+                                </filter>
+                                <filter id="sb-node-shadow" x="-80%" y="-80%" width="260%" height="260%">
+                                    <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1e1b4b" flood-opacity="0.35"/>
+                                </filter>
+                            </defs>
+                            <rect width="400" height="220" fill="url(#sb-bg)"/>
+                            <g stroke="#ffffff" stroke-opacity="0.06">
+                                <line x1="0" y1="55" x2="400" y2="55"/>
+                                <line x1="0" y1="110" x2="400" y2="110"/>
+                                <line x1="0" y1="165" x2="400" y2="165"/>
+                                <line x1="100" y1="0" x2="100" y2="220"/>
+                                <line x1="200" y1="0" x2="200" y2="220"/>
+                                <line x1="300" y1="0" x2="300" y2="220"/>
+                            </g>
+                            <circle cx="200" cy="110" r="100" fill="url(#sb-glow)"/>
+                            <g stroke="#ffffff" stroke-opacity="0.3" stroke-width="1.5" fill="none">
+                                <path d="M70,55 C130,55 150,80 195,105"/>
+                                <path d="M70,165 C130,165 150,140 195,115"/>
+                                <path d="M205,100 C250,80 270,65 330,55"/>
+                            </g>
+                            <!-- glow trail -->
+                            <path d="M70,110 C140,110 160,110 195,110 C260,110 280,150 330,155" stroke="#facc15" stroke-width="9" stroke-opacity="0.4" fill="none" filter="url(#sb-blur)"/>
+                            <!-- animated active route -->
+                            <path class="banner-flow" d="M70,110 C140,110 160,110 195,110 C260,110 280,150 330,155" stroke="#fde68a" stroke-width="2.5" fill="none"/>
+                            <!-- traveling signal -->
+                            <circle class="banner-traveler sb-traveler" r="5" fill="#fff7d6"/>
+                            <g fill="#ffffff">
+                                <circle cx="70" cy="55" r="7" fill-opacity="0.55"/>
+                                <circle cx="70" cy="110" r="8" filter="url(#sb-node-shadow)"/>
+                                <circle cx="70" cy="165" r="7" fill-opacity="0.55"/>
+                            </g>
+                            <!-- pulse rings around hub -->
+                            <circle class="banner-pulse" cx="200" cy="110" r="26" fill="none" stroke="#facc15" stroke-width="2"/>
+                            <circle class="banner-pulse banner-pulse-delay" cx="200" cy="110" r="26" fill="none" stroke="#facc15" stroke-width="2"/>
+                            <circle cx="200" cy="110" r="26" fill="#ffffff" filter="url(#sb-node-shadow)"/>
+                            <circle cx="200" cy="110" r="26" fill="none" stroke="#facc15" stroke-width="2"/>
+                            <path d="M190,110 h20 M200,100 l8,10 l-8,10" stroke="#6d28d9" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            <g fill="#ffffff">
+                                <circle cx="330" cy="55" r="7" fill-opacity="0.55"/>
+                                <circle cx="330" cy="155" r="9" filter="url(#sb-node-shadow)"/>
+                                <circle cx="330" cy="155" r="9" fill="none" stroke="#facc15" stroke-width="2"/>
+                            </g>
+                        </svg>
+                        <span class="banner-badge">Ticket Router</span>
+                        <div class="project-overlay">
+                            <a href="https://github.com/PlainJane20/switchboard" target="_blank" class="project-link">View on GitHub</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Switchboard</h3>
+                        <p>
+                            A git-native ticket router for a fleet of specialist AI agents. Deterministic tag-match routing with a Claude-assisted fallback for genuinely ambiguous cases, risk-tiered dispatch, and an append-only audit ledger — and it remembers every human correction so the next ambiguous ticket benefits from it.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Claude / Anthropic API</span>
+                            <span class="tag">Multi-Agent Orchestration</span>
+                            <span class="tag">Deterministic Routing</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image project-image--taskloom">
+                        <svg class="banner-art" viewBox="0 0 400 220" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <defs>
+                                <linearGradient id="tl-bg" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#0f9b8e"/>
+                                    <stop offset="100%" stop-color="#0ea5b8"/>
+                                </linearGradient>
+                                <radialGradient id="tl-glow" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" stop-color="#ffffff" stop-opacity="0.24"/>
+                                    <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+                                </radialGradient>
+                                <linearGradient id="tl-progress" x1="0" y1="0" x2="1" y2="0">
+                                    <stop offset="0%" stop-color="#facc15"/>
+                                    <stop offset="42%" stop-color="#fde68a"/>
+                                    <stop offset="70%" stop-color="#ffffff" stop-opacity="0.55"/>
+                                    <stop offset="100%" stop-color="#ffffff" stop-opacity="0.2"/>
+                                </linearGradient>
+                                <filter id="tl-blur" x="-80%" y="-80%" width="260%" height="260%">
+                                    <feGaussianBlur stdDeviation="5"/>
+                                </filter>
+                                <filter id="tl-node-shadow" x="-80%" y="-80%" width="260%" height="260%">
+                                    <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#043c3c" flood-opacity="0.35"/>
+                                </filter>
+                            </defs>
+                            <rect width="400" height="220" fill="url(#tl-bg)"/>
+                            <g stroke="#ffffff" stroke-opacity="0.06">
+                                <line x1="0" y1="73" x2="400" y2="73"/>
+                                <line x1="0" y1="146" x2="400" y2="146"/>
+                                <line x1="80" y1="0" x2="80" y2="220"/>
+                                <line x1="160" y1="0" x2="160" y2="220"/>
+                                <line x1="240" y1="0" x2="240" y2="220"/>
+                                <line x1="320" y1="0" x2="320" y2="220"/>
+                            </g>
+                            <circle cx="200" cy="110" r="130" fill="url(#tl-glow)"/>
+                            <!-- glow trail -->
+                            <path d="M65,110 H335" stroke="#facc15" stroke-width="9" stroke-opacity="0.3" filter="url(#tl-blur)"/>
+                            <!-- progress bar -->
+                            <path d="M65,110 H335" stroke="url(#tl-progress)" stroke-width="3"/>
+                            <!-- traveling signal -->
+                            <circle class="banner-traveler tl-traveler" r="5" fill="#fff7d6"/>
+                            <rect x="45" y="90" width="40" height="40" rx="10" fill="#ffffff" filter="url(#tl-node-shadow)"/>
+                            <circle class="banner-pulse tl-pulse" cx="65" cy="110" r="20" fill="none" stroke="#facc15" stroke-width="2"/>
+                            <rect x="45" y="90" width="40" height="40" rx="10" fill="none" stroke="#facc15" stroke-width="2"/>
+                            <circle cx="165" cy="110" r="20" fill="#ffffff" filter="url(#tl-node-shadow)"/>
+                            <path d="M245,90 L268,130 L222,130 Z" fill="#ffffff" fill-opacity="0.55"/>
+                            <rect x="305" y="92" width="36" height="36" rx="8" fill="#ffffff" fill-opacity="0.35" transform="rotate(45 323 110)"/>
+                            <g font-family="Inter, sans-serif" font-size="11" font-weight="700" text-anchor="middle">
+                                <text x="65" y="146" fill="#ffffff" fill-opacity="0.9">Plan</text>
+                                <text x="165" y="146" fill="#ffffff" fill-opacity="0.85">Build</text>
+                                <text x="245" y="146" fill="#ffffff" fill-opacity="0.55">Review</text>
+                                <text x="323" y="146" fill="#ffffff" fill-opacity="0.55">Done</text>
+                            </g>
+                        </svg>
+                        <span class="banner-badge">Agent Control Plane</span>
+                        <div class="project-overlay">
+                            <a href="https://github.com/PlainJane20/taskloom" target="_blank" class="project-link">View on GitHub</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Taskloom</h3>
+                        <p>
+                            A local-first visual control plane for teams of AI agents. Assemble reusable Planner/Builder/Reviewer agent teams, wire them into dependency-aware workflows, and choose exactly where humans stay in the approval loop — with a governed task lifecycle, GitHub Issues sync, and hash-verified snapshot recovery, backed by 114 automated tests.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">React + TypeScript</span>
+                            <span class="tag">Tauri / Rust</span>
+                            <span class="tag">Agent Governance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="projects-more animate-on-scroll">
+                <a href="https://github.com/PlainJane20" target="_blank" class="view-more-btn">See more on GitHub →</a>
+            </p>
+        </div>
+    </section>
+
     <!-- Education & Certifications Section -->
     <section id="education" class="education">
         <div class="container">
@@ -326,6 +496,27 @@
             <div class="testimonials-carousel-wrapper animate-on-scroll">
                 <button class="carousel-btn carousel-btn-prev" id="carouselPrev">‹</button>
                 <div class="testimonials-carousel" id="testimonialsCarousel">
+                    <!-- Recommendation: Michael Acks -->
+                    <div class="testimonial-card">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">
+                            Navi and I worked closely together during our time at Verily Health, and I can say without hesitation that she is <strong>one of the most capable program managers</strong> I've had the privilege of partnering with. Navi consistently operates with the big picture and end goal in mind, and she has a rare ability to translate that vision into clear, actionable plans that teams can actually execute against.
+                        </p>
+                        <p class="testimonial-text">
+                            What sets Navi apart is how she leads. She is <strong>bullish when it comes to holding people accountable</strong>, sets clear expectations and follows through on them, and doesn't shy away from the hard conversations that keep projects on track. But she pairs that rigor with <strong>genuine compassion</strong> — she takes the time to understand what her team members are dealing with, checks in as a person and not just a project manager, and creates an environment where people feel supported even when the bar is high.
+                        </p>
+                        <p class="testimonial-text">
+                            Navi also <strong>goes well beyond what's asked of her</strong>. She doesn't wait to be told there's a gap; she finds it, raises it, and closes it, often before it becomes a real problem. That combination of ownership, foresight, and follow through is what makes her someone stakeholders trust and teams want to work for. Any organization would be fortunate to have Navi driving their programs — she's the kind of program manager who <strong>makes everyone around her better</strong>.
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">MA</div>
+                            <div class="author-info">
+                                <h4>Michael Acks</h4>
+                                <p>Senior Director, Program Management, BAL • Worked with Navi at Verily</p>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Recommendation 1: Surabhi Mahanty -->
                     <div class="testimonial-card">
                         <div class="quote-icon">"</div>
@@ -575,7 +766,7 @@
                         <div class="placeholder-content">
                             <div class="stats-grid">
                                 <div class="stat-item">
-                                    <div class="stat-number">17</div>
+                                    <div class="stat-number">18</div>
                                     <div class="stat-label">LinkedIn Recommendations</div>
                                 </div>
                                 <div class="stat-item">
