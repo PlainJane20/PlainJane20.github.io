@@ -770,6 +770,25 @@ section {
 .projects-more {
     text-align: center;
     margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.projects-more .view-more-btn {
+    border: 2px solid transparent;
+}
+
+.projects-more .view-more-btn--outline {
+    background: var(--bg-card);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+    box-shadow: none;
+}
+
+.projects-more .view-more-btn--outline:hover {
+    border-color: var(--primary-color);
 }
 
 /* Education & Certifications Section */
