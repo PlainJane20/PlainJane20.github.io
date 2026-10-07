@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" role="img" aria-labelledby="title description">
+  <title id="title">TARMAC</title>
+  <desc id="description">From idea to impact—connecting delivery evidence and governed decisions.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#081a2a"/>
+      <stop offset="0.56" stop-color="#12354d"/>
+      <stop offset="1" stop-color="#f5b942" stop-opacity=".72"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#5eead4" stop-opacity=".26"/>
+      <stop offset="1" stop-color="#5eead4" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#030b13" flood-opacity=".38"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="320" rx="24" fill="url(#bg)"/>
+  <circle cx="1035" cy="55" r="230" fill="url(#glow)"/>
+  <g opacity=".16" fill="none" stroke="#5eead4" stroke-width="1.2" color="#5eead4"><path d="M780 251l95-178M885 251l74-140M990 251l53-101M1095 251l31-59"/><path d="M756 251h420M812 191h335M842 135h275M873 78h215"/><g fill="currentColor" stroke="none"><circle cx="875" cy="73" r="6"/><circle cx="959" cy="111" r="6"/><circle cx="1043" cy="150" r="6"/><circle cx="1126" cy="192" r="6"/></g></g>
+  <g transform="translate(74 68)" filter="url(#shadow)">
+    <rect width="88" height="88" rx="22" fill="#102f45" stroke="#5eead4" stroke-opacity=".58"/>
+    <g fill="none" stroke="#5eead4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" color="#5eead4"><path d="M44 9v70M33 19h22M36 35h16M39 52h10M41 68h6"/><circle cx="44" cy="9" r="6" fill="currentColor" stroke="none"/><path d="M16 79h56"/></g>
+  </g>
+  <text x="190" y="112" fill="#ffffff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="50" font-weight="750" letter-spacing="-1">TARMAC</text>
+  <text x="192" y="153" fill="#5eead4" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="2.5">THE ENTERPRISE DELIVERY CONTROL PLANE</text>
+  <text x="75" y="225" fill="#dcebf0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21">From idea to impact—connecting delivery evidence</text>
+  <text x="75" y="258" fill="#dcebf0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21">and governed decisions.</text>
+  <g transform="translate(786 168)" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700"><g transform="translate(0 0)"><rect width="108" height="42" rx="21" fill="#ffffff" fill-opacity=".1" stroke="#ffffff" stroke-opacity=".2"/><text x="54" y="26" text-anchor="middle" fill="#edf7fa">6 capabilities</text></g><g transform="translate(118 0)"><rect width="114" height="42" rx="21" fill="#ffffff" fill-opacity=".1" stroke="#ffffff" stroke-opacity=".2"/><text x="57" y="26" text-anchor="middle" fill="#edf7fa">evidence driven</text></g><g transform="translate(242 0)"><rect width="132" height="42" rx="21" fill="#ffffff" fill-opacity=".1" stroke="#ffffff" stroke-opacity=".2"/><text x="66" y="26" text-anchor="middle" fill="#edf7fa">governed by design</text></g></g>
+</svg>
